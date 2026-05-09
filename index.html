@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Estructura semántica: HEADER -->
+    <header>
+        <h1>📝 Registro de Usuario</h1>
+        <p>Completa tus datos para crear una cuenta</p>
+    </header>
+
+    <!-- Estructura semántica: MAIN -->
+    <main>
+        <form id="registroForm">
+
+            <!-- Imagen de perfil -->
+            <div class="foto-perfil">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Foto de perfil" id="previewImg">
+                <label for="foto">Cambiar foto</label>
+                <input type="file" id="foto" accept="image/*">
+            </div>
+
+            <!-- Nombre completo -->
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" required placeholder="Tu nombre y apellido">
+
+            <!-- Correo -->
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" required placeholder="correo@ejemplo.com">
+
+            <!-- Contraseña (mínimo 8 caracteres) -->
+            <label for="pass">Contraseña * <small>(mínimo 8 caracteres)</small></label>
+            <input type="password" id="pass" required minlength="8" placeholder="Escribe tu contraseña">
+
+            <!-- Confirmar contraseña -->
+            <label for="pass2">Confirmar contraseña *</label>
+            <input type="password" id="pass2" required minlength="8" placeholder="Repite tu contraseña">
+
+            <!-- Fecha de nacimiento -->
+            <label for="fechaNac">Fecha de nacimiento *</label>
+            <input type="date" id="fechaNac" required>
+
+            <!-- Color favorito -->
+            <label for="color">Color favorito:</label>
+            <input type="color" id="color" value="#007bff">
+
+            <!-- País con datalist -->
+            <label for="pais">País *</label>
+            <input list="paises" id="pais" name="pais" required placeholder="Escribe o selecciona tu país">
+            <datalist id="paises">
+                <option value="México">
+                <option value="Argentina">
+                <option value="Chile">
+                <option value="Colombia">
+                <option value="España">
+                <option value="Estados Unidos">
+                <option value="Perú">
+                <option value="Venezuela">
+                <option value="Otro">
+            </datalist>
+
+            <button type="submit">Registrarme</button>
+        </form>
+    </main>
+
+    <!-- Estructura semántica: FOOTER -->
+    <footer>
+        <p>© 2026 Registro de Usuario - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
